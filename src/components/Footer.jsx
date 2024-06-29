@@ -6,14 +6,13 @@ import { FaHeart } from "react-icons/fa";
 const Footer = () => {
   const socialIcons = [
     { icon: <FaGithub />, href: "https://github.com/cod3-assassin" },
-
     { icon: <FaXTwitter />, href: "https://twitter.com/cod3_assassin" },
     { icon: <FaInstagram />, href: "https://www.instagram.com/cod3_assassin/" },
   ];
 
   return (
-    <footer className="bg-gray-800 text-white py-4">
-      <div className="container mx-auto flex justify-between items-center flex-wrap">
+    <footer className="text-white py-2 md:py-4 bg-gray-900 shadow-2xl sticky bottom-0 z-10">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <p className="text-sm mb-2 md:mb-0">© 2024 All rights reserved</p>
         <p className="text-sm mb-2 md:mb-0">
           Made with <FaHeart className="text-red-500 inline" /> by cod3_assassin
