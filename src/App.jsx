@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}>
           <Route index element={<ProjectList />} />
+
           <Route path="simple-counter" element={<SimpleCounter />} />
           <Route path="to-do-list" element={<ToDoList />} />
           {/* Add routes for other projects here... */}

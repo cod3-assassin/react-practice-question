@@ -1,10 +1,15 @@
+// src/components/Home.js
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import Logo from "./canvas.png";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import BackButton from "./BackButton";
 
 const Home = () => {
+  const location = useLocation();
+  const showBackButton = location.pathname !== "/";
+
   return (
     <div className="bg-gray-900 min-h-screen flex flex-col">
       <header className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 shadow-2xl py-2 md:py-4 sticky top-0 z-10">
@@ -44,6 +49,7 @@ const Home = () => {
           </nav>
         </div>
       </header>
+      {showBackButton && <BackButton />}
       <main className="container mx-auto px-6 py-10 flex-grow overflow-auto">
         <Outlet />
       </main>
