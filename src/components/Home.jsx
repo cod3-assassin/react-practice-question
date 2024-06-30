@@ -3,7 +3,8 @@ import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import Logo from "./canvas.png";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import BackButton from "./BackButton";
 
 const Home = () => {
@@ -26,25 +27,25 @@ const Home = () => {
           </div>
           <nav className="flex space-x-2 md:space-x-4">
             <a
-              href="https://github.com"
+              href="https://github.com/cod3-assassin"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/wasim-shah-3198b52b8"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/cod3_assassin"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
+              <FaXTwitter className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
             </a>
           </nav>
         </div>
