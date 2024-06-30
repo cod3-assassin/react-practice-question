@@ -1,6 +1,5 @@
-// src/components/ProjectList/ProjectCard.js
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => {
@@ -12,8 +11,8 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-yellow-100">
-      <div className="px-6 py-4">
+    <div className="w-full h-full max-w-sm rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-yellow-100 flex flex-col justify-between">
+      <div className="px-6 py-4 flex-grow">
         <div className="font-bold text-xl mb-2 text-gray-900">
           {project.title}
         </div>
