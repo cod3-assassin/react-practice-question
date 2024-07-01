@@ -7,7 +7,11 @@ const ProjectCard = ({ project }) => {
 
   // Function to navigate to project detail page
   const viewProject = () => {
-    navigate(project.link);
+    // Add smooth transition effect
+    document.getElementById("project-container").classList.add("fade-out");
+    setTimeout(() => {
+      navigate(`/project${project.link}`);
+    }, 300); // Adjust this timeout to match your CSS transition duration
   };
 
   return (
