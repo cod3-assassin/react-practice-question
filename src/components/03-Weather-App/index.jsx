@@ -1,8 +1,11 @@
-// src/components/03-Weather-App.js
 import React from "react";
-
+import App from "./App";
 const WeatherApp = () => {
-  return <div>Weather App Component</div>;
+  return (
+    <div>
+      <App />
+    </div>
+  );
 };
 
 export default WeatherApp;
