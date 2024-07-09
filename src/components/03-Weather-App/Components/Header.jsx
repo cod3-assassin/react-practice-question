@@ -1,13 +1,11 @@
 import React from "react";
-import WeatherCard from "./WeatherCard";
 
 const Header = () => {
   return (
-    <div className="bg-white h-auto w-auto flex justify-center">
-      <h1 className="text-2xl font-serif">Weather App</h1>
-
-      <WeatherCard />
-    </div>
+    <header className="text-center text-white py-8">
+      <h1 className="text-3xl font-bold">Weather App</h1>
+      <p className="mt-2">Find weather details for any city</p>
+    </header>
   );
 };
 

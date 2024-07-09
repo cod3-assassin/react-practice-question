@@ -8,10 +8,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<ProjectList />} />
-          <Route path="project/:projectId" element={<ProjectView />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:projectId" element={<ProjectView />} />
       </Routes>
     </Router>
   );

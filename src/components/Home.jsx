@@ -1,15 +1,24 @@
-// src/components/Home.js
-import React from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 import Footer from "./Footer";
 import Logo from "./canvas.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+import ProjectList from "./ProjectList/ProjectList"; // Import ProjectList component
 import BackButton from "./BackButton";
 
 const Home = () => {
-  const location = useLocation();
-  const showBackButton = location.pathname !== "/";
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+  const [lastVisitedProject, setLastVisitedProject] = useState(null);
+
+  const handleProjectClick = (projectId) => {
+    setLastVisitedProject(projectId);
+    navigate(`/project/${projectId}`); // Use navigate to navigate to a specific project
+  };
+
+  const handleBack = () => {
+    navigate(-1); // Use navigate with -1 to go back
+  };
 
   return (
     <div className="bg-gray-900 min-h-screen flex flex-col">
@@ -45,16 +54,16 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaXTwitter className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
+              <FaTwitter className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
             </a>
           </nav>
         </div>
       </header>
-      {showBackButton && <BackButton />}
       <main className="container mx-auto px-6 py-10 flex-grow overflow-auto">
-        <Outlet />
+        <ProjectList onProjectClick={handleProjectClick} />
       </main>
       <Footer />
+      {lastVisitedProject && <BackButton onClick={handleBack} />}
     </div>
   );
 };

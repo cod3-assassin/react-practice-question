@@ -17,7 +17,7 @@ const projectData = [
     id: 3,
     title: "03-Weather App",
     description:
-      "A weather application that allows users to search for the current weather conditions in any city. This project demonstrates API integration, state management, and responsive design with Tailwind CSS.",
+      "A weather application that enables users to search for the current weather conditions in any city. This project showcases dynamic rendering of weather data fetched from an API, integration of React hooks for state management, and responsive design using Tailwind CSS.",
     link: "/weather-app",
   },
   {
