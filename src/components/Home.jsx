@@ -1,23 +1,18 @@
+// src/components/Home.jsx
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import { useNavigate, Link } from "react-router-dom";
 import Footer from "./Footer";
 import Logo from "./canvas.png";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import ProjectList from "./ProjectList/ProjectList"; // Import ProjectList component
-import BackButton from "./BackButton";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import projectData from "./ProjectList/ProjectData";
 
 const Home = () => {
-  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+  const navigate = useNavigate();
   const [lastVisitedProject, setLastVisitedProject] = useState(null);
 
   const handleProjectClick = (projectId) => {
     setLastVisitedProject(projectId);
-    navigate(`/project/${projectId}`); // Use navigate to navigate to a specific project
-  };
-
-  const handleBack = () => {
-    navigate(-1); // Use navigate with -1 to go back
+    navigate(`/project/${projectId}`);
   };
 
   return (
@@ -59,11 +54,22 @@ const Home = () => {
           </nav>
         </div>
       </header>
-      <main className="container mx-auto px-6 py-10 flex-grow overflow-auto">
-        <ProjectList onProjectClick={handleProjectClick} />
-      </main>
-      <Footer />
-      {lastVisitedProject && <BackButton onClick={handleBack} />}
+
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-8">Project List</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {projectData.map((project) => (
+            <div key={project.id} className="border p-4 rounded shadow">
+              <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
+              <p className="mb-4">{project.description}</p>
+              <Link to={`/project/${project.link}`} className="text-blue-500">
+                View Project
+              </Link>
+            </div>
+          ))}
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 };

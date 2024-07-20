@@ -15,17 +15,18 @@ const ProjectCard = ({ project }) => {
   };
 
   return (
-    <div className="w-full h-full max-w-sm rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-yellow-100 flex flex-col justify-between">
-      <div className="px-6 py-4 flex-grow">
-        <div className="font-bold text-xl mb-2 text-gray-900">
+    <div className="relative w-full h-full max-w-sm rounded-lg overflow-hidden shadow-xl transition-transform transform hover:scale-105 duration-300 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 flex flex-col justify-between">
+      <div className="absolute inset-0 bg-gradient-to-t from-black opacity-40"></div>
+      <div className="relative px-6 py-4 flex-grow z-10">
+        <div className="text-2xl font-extrabold text-white mb-2">
           {project.title}
         </div>
-        <p className="text-gray-700 text-base">{project.description}</p>
+        <p className="text-white text-base">{project.description}</p>
       </div>
-      <div className="px-6 py-4 flex justify-end">
+      <div className="relative px-6 py-4 flex justify-end z-10">
         <button
           onClick={viewProject}
-          className="text-blue-500 hover:text-blue-700 transition-colors duration-300 flex items-center"
+          className="bg-gradient-to-r from-blue-400 to-purple-500 text-white font-bold py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center"
         >
           View Project <FaArrowRight className="ml-2" />
         </button>
