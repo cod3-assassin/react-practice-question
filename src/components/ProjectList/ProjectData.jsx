@@ -24,7 +24,7 @@ const projectData = [
     id: 4,
     title: "04-Calculator",
     description:
-      "A calculator application that allows users to perform basic arithmetic operations. This project showcases state management, event handling, and responsive design with Tailwind CSS.",
+      "An advanced calculator application that supports continuous arithmetic operations, percentage calculations, and keyboard input. This project demonstrates state management using React Hooks, event handling for seamless interaction, and responsive design with Tailwind CSS. The interface is enhanced with modern UI elements like dynamic button styling and a clean, elegant layout.",
     link: "calculator",
   },
   {
