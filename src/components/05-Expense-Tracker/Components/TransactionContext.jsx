@@ -2,6 +2,7 @@ import React, { createContext, useReducer, useEffect } from "react";
 
 const initialState = {
   transactions: JSON.parse(localStorage.getItem("transactions")) || [],
+  income: JSON.parse(localStorage.getItem("income")) || 0,
 };
 
 const TransactionContext = createContext(initialState);
@@ -9,10 +10,17 @@ const TransactionContext = createContext(initialState);
 const transactionReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TRANSACTION":
-      return {
-        ...state,
-        transactions: [...state.transactions, action.payload],
-      };
+      if (action.payload.type === "income") {
+        return {
+          ...state,
+          income: state.income + action.payload.amount,
+        };
+      } else {
+        return {
+          ...state,
+          transactions: [...state.transactions, action.payload],
+        };
+      }
     case "DELETE_TRANSACTION":
       return {
         ...state,
@@ -20,12 +28,10 @@ const transactionReducer = (state, action) => {
           (transaction) => transaction.id !== action.payload
         ),
       };
-    case "EDIT_TRANSACTION":
+    case "RESET_INCOME":
       return {
         ...state,
-        transactions: state.transactions.map((transaction) =>
-          transaction.id === action.payload.id ? action.payload : transaction
-        ),
+        income: 0,
       };
     default:
       return state;
@@ -37,7 +43,8 @@ export const TransactionProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("transactions", JSON.stringify(state.transactions));
-  }, [state.transactions]);
+    localStorage.setItem("income", JSON.stringify(state.income));
+  }, [state.transactions, state.income]);
 
   const addTransaction = (transaction) => {
     dispatch({ type: "ADD_TRANSACTION", payload: transaction });
@@ -47,17 +54,18 @@ export const TransactionProvider = ({ children }) => {
     dispatch({ type: "DELETE_TRANSACTION", payload: id });
   };
 
-  const editTransaction = (transaction) => {
-    dispatch({ type: "EDIT_TRANSACTION", payload: transaction });
+  const resetIncome = () => {
+    dispatch({ type: "RESET_INCOME" });
   };
 
   return (
     <TransactionContext.Provider
       value={{
         transactions: state.transactions,
+        income: state.income,
         addTransaction,
         deleteTransaction,
-        editTransaction,
+        resetIncome,
       }}
     >
       {children}

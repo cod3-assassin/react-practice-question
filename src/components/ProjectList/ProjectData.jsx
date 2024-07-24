@@ -5,6 +5,8 @@ const projectData = [
     description:
       "A basic counter application that allows users to increment and decrement a value. Additional features include a reset button and an input field to set the counter to a specific value. This project demonstrates the use of state management in React using hooks, as well as responsive design with Tailwind CSS.",
     link: "simple-counter",
+    integration: ["React Hooks (useState)", "Tailwind CSS for styling"],
+    concept: ["Basic state management", "Responsive design"],
   },
   {
     id: 2,
@@ -12,6 +14,16 @@ const projectData = [
     description:
       "A to-do list application that enables users to add, edit, and remove tasks. Additional features include setting task due dates and priorities, as well as persistent storage using local storage. This project showcases dynamic list rendering, state management with hooks, and responsive design with Tailwind CSS.",
     link: "to-do-list",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "Local Storage for data persistence",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Dynamic list rendering",
+      "State management",
+      "Persistent storage",
+    ],
   },
   {
     id: 3,
@@ -19,6 +31,12 @@ const projectData = [
     description:
       "A weather application that enables users to search for the current weather conditions in any city. This project showcases dynamic rendering of weather data fetched from an API, integration of React hooks for state management, and responsive design using Tailwind CSS.",
     link: "weather-app",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "Weather API integration",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["API data fetching", "Dynamic rendering", "Responsive design"],
   },
   {
     id: 4,
@@ -26,12 +44,36 @@ const projectData = [
     description:
       "An advanced calculator application that supports continuous arithmetic operations, percentage calculations, and keyboard input. This project demonstrates state management using React Hooks, event handling for seamless interaction, and responsive design with Tailwind CSS. The interface is enhanced with modern UI elements like dynamic button styling and a clean, elegant layout.",
     link: "calculator",
+    integration: [
+      "React Hooks (useState)",
+      "Keyboard event handling",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Continuous arithmetic operations",
+      "Dynamic button styling",
+      "Responsive design",
+    ],
   },
   {
     id: 5,
     title: "05-Expense Tracker",
     description:
-      "An expense tracker application that helps users manage their income and expenses. This project demonstrates state management, form handling, and persistent storage using local storage.",
+      "An expense tracker application built with React and Tailwind CSS, designed to help users manage their income and expenses efficiently.",
+    integration: [
+      "State management handled using the useReducer hook",
+      "Form handling for adding income and expenses",
+      "Context API for global state management",
+      "Local storage for data persistence",
+      "Tailwind CSS for responsive UI",
+    ],
+    concept: [
+      "React hooks (useState, useReducer, useContext)",
+      "Context API",
+      "Local storage",
+      "Form handling",
+      "Responsive design",
+    ],
     link: "expense-tracker",
   },
   {
@@ -40,6 +82,16 @@ const projectData = [
     description:
       "A movie search application that allows users to search for movies and view details. This project showcases API integration, state management, and responsive design with Tailwind CSS.",
     link: "movies-app",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "Movie API integration",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "API data fetching",
+      "Dynamic search functionality",
+      "Responsive design",
+    ],
   },
   {
     id: 7,
@@ -47,6 +99,12 @@ const projectData = [
     description:
       "A notes application that allows users to create, edit, and delete notes. This project demonstrates state management, form handling, and persistent storage using local storage.",
     link: "notes-app",
+    integration: [
+      "React Hooks (useState)",
+      "Local Storage for data persistence",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["CRUD operations", "State management", "Responsive design"],
   },
   {
     id: 8,
@@ -54,6 +112,12 @@ const projectData = [
     description:
       "A markdown previewer application that converts markdown text into HTML. This project showcases state management, form handling, and responsive design with Tailwind CSS.",
     link: "markdown-preview",
+    integration: [
+      "React Hooks (useState)",
+      "Markdown-to-HTML converter library",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["Markdown rendering", "State management", "Responsive design"],
   },
   {
     id: 9,
@@ -61,6 +125,16 @@ const projectData = [
     description:
       "A recipe application that allows users to search for recipes and view details. This project demonstrates API integration, state management, and responsive design with Tailwind CSS.",
     link: "recipe-app",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "Recipe API integration",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "API data fetching",
+      "Dynamic recipe display",
+      "Responsive design",
+    ],
   },
   {
     id: 10,
@@ -68,6 +142,16 @@ const projectData = [
     description:
       "An image gallery application that allows users to view and upload images. This project showcases state management, file handling, and responsive design with Tailwind CSS.",
     link: "image-gallery",
+    integration: [
+      "React Hooks (useState)",
+      "File handling for uploads",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Image upload and display",
+      "State management",
+      "Responsive design",
+    ],
   },
   {
     id: 11,
@@ -75,6 +159,12 @@ const projectData = [
     description:
       "A blog application that allows users to create, edit, and delete blog posts. This project demonstrates state management, form handling, and persistent storage using local storage.",
     link: "blog-app",
+    integration: [
+      "React Hooks (useState)",
+      "Local Storage for data persistence",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["CRUD operations", "State management", "Responsive design"],
   },
   {
     id: 12,
@@ -82,6 +172,12 @@ const projectData = [
     description:
       "A chat application that allows users to send and receive messages in real-time. This project showcases state management, WebSocket integration, and responsive design with Tailwind CSS.",
     link: "chat-app",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "WebSocket for real-time messaging",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["Real-time messaging", "State management", "Responsive design"],
   },
   {
     id: 13,
@@ -89,6 +185,16 @@ const projectData = [
     description:
       "An e-commerce store application that allows users to browse products, add items to the cart, and place orders. This project demonstrates state management, API integration, and responsive design with Tailwind CSS.",
     link: "ecommerce-store",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "E-commerce API integration",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Product listing and cart management",
+      "State management",
+      "Responsive design",
+    ],
   },
   {
     id: 14,
@@ -96,6 +202,16 @@ const projectData = [
     description:
       "A user authentication application that allows users to register, log in, and log out. This project showcases state management, form handling, and authentication with JWT.",
     link: "user-authentication",
+    integration: [
+      "React Hooks (useState)",
+      "JWT for authentication",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "User registration and login",
+      "State management",
+      "Responsive design",
+    ],
   },
   {
     id: 15,
@@ -103,6 +219,12 @@ const projectData = [
     description:
       "A portfolio application that allows users to showcase their projects and skills. This project demonstrates state management, form handling, and responsive design with Tailwind CSS.",
     link: "portfolio",
+    integration: [
+      "React Hooks (useState)",
+      "Tailwind CSS for styling",
+      "Responsive design",
+    ],
+    concept: ["Project showcase", "State management", "Responsive design"],
   },
   {
     id: 16,
@@ -110,6 +232,12 @@ const projectData = [
     description:
       "A quiz application that allows users to take quizzes and view their scores. This project showcases state management, form handling, and responsive design with Tailwind CSS.",
     link: "quiz-app",
+    integration: [
+      "React Hooks (useState)",
+      "Quiz logic implementation",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["Quiz functionality", "State management", "Responsive design"],
   },
   {
     id: 17,
@@ -117,6 +245,16 @@ const projectData = [
     description:
       "A form validation application that demonstrates how to validate form inputs in real-time. This project showcases state management, form handling, and validation techniques.",
     link: "form-validation",
+    integration: [
+      "React Hooks (useState)",
+      "Form validation library",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Form validation techniques",
+      "State management",
+      "Responsive design",
+    ],
   },
   {
     id: 18,
@@ -124,6 +262,16 @@ const projectData = [
     description:
       "A drag-and-drop application that allows users to drag and drop items within a list. This project demonstrates state management, event handling, and responsive design with Tailwind CSS.",
     link: "drag-and-drop",
+    integration: [
+      "React Hooks (useState)",
+      "Drag-and-drop library",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Drag-and-drop functionality",
+      "State management",
+      "Responsive design",
+    ],
   },
   {
     id: 19,
@@ -131,6 +279,12 @@ const projectData = [
     description:
       "An infinite scrolling application that loads more content as the user scrolls down the page. This project showcases state management, API integration, and responsive design with Tailwind CSS.",
     link: "infinite-scrolling",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "API integration for loading content",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["Infinite scrolling", "State management", "Responsive design"],
   },
   {
     id: 20,
@@ -138,6 +292,16 @@ const projectData = [
     description:
       "A Kanban board application that allows users to manage tasks in different stages. This project demonstrates state management, drag-and-drop functionality, and responsive design with Tailwind CSS.",
     link: "kanban-board",
+    integration: [
+      "React Hooks (useState)",
+      "Drag-and-drop library",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Kanban task management",
+      "Drag-and-drop functionality",
+      "Responsive design",
+    ],
   },
   {
     id: 21,
@@ -145,6 +309,12 @@ const projectData = [
     description:
       "A music player application that allows users to play, pause, and skip tracks. This project showcases state management, audio handling, and responsive design with Tailwind CSS.",
     link: "music-player",
+    integration: [
+      "React Hooks (useState)",
+      "Audio handling for playback",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["Audio playback", "State management", "Responsive design"],
   },
   {
     id: 22,
@@ -152,6 +322,12 @@ const projectData = [
     description:
       "A social media dashboard application that displays metrics and insights from various social media platforms. This project demonstrates state management, API integration, and responsive design with Tailwind CSS.",
     link: "social-media-dashboard",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "Social media API integration",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["Data visualization", "API integration", "Responsive design"],
   },
   {
     id: 23,
@@ -159,6 +335,16 @@ const projectData = [
     description:
       "A movie recommendation system that suggests movies based on user preferences. This project showcases state management, API integration, and responsive design with Tailwind CSS.",
     link: "movie-recommendation",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "Movie recommendation API integration",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Movie recommendation algorithms",
+      "State management",
+      "Responsive design",
+    ],
   },
   {
     id: 24,
@@ -166,6 +352,12 @@ const projectData = [
     description:
       "A real-time notifications application that displays notifications as they are received. This project demonstrates state management, WebSocket integration, and responsive design with Tailwind CSS.",
     link: "real-time-notifications",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "WebSocket for real-time notifications",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["Real-time updates", "State management", "Responsive design"],
   },
   {
     id: 25,
@@ -173,6 +365,12 @@ const projectData = [
     description:
       "A GraphQL client application that demonstrates how to fetch data from a GraphQL API. This project showcases state management, API integration, and responsive design with Tailwind CSS.",
     link: "graphql-client",
+    integration: [
+      "React Hooks (useState, useEffect)",
+      "GraphQL API integration",
+      "Tailwind CSS for styling",
+    ],
+    concept: ["GraphQL data fetching", "State management", "Responsive design"],
   },
   {
     id: 26,
@@ -180,6 +378,16 @@ const projectData = [
     description:
       "A multi-step form application that guides users through a series of steps to complete a process. This project demonstrates state management, form handling, and responsive design with Tailwind CSS.",
     link: "multi-step-form",
+    integration: [
+      "React Hooks (useState)",
+      "Multi-step form logic",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Multi-step form handling",
+      "State management",
+      "Responsive design",
+    ],
   },
   {
     id: 27,
@@ -187,6 +395,16 @@ const projectData = [
     description:
       "A Context API example application that demonstrates how to manage state using the Context API. This project showcases state management, context usage, and responsive design with Tailwind CSS.",
     link: "context-api-example",
+    integration: [
+      "React Context API",
+      "React Hooks (useContext, useState)",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Context API for state management",
+      "State management",
+      "Responsive design",
+    ],
   },
   {
     id: 28,
@@ -194,6 +412,16 @@ const projectData = [
     description:
       "A higher-order components application that demonstrates how to enhance components using higher-order functions. This project showcases state management, component composition, and responsive design with Tailwind CSS.",
     link: "higher-order-components",
+    integration: [
+      "React Higher-Order Components",
+      "React Hooks (useState)",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Higher-order components",
+      "Component composition",
+      "Responsive design",
+    ],
   },
   {
     id: 29,
@@ -201,6 +429,16 @@ const projectData = [
     description:
       "A render props application that demonstrates how to share functionality between components using the render props pattern. This project showcases state management, component composition, and responsive design with Tailwind CSS.",
     link: "render-props",
+    integration: [
+      "React Render Props",
+      "React Hooks (useState)",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Render props pattern",
+      "Component composition",
+      "Responsive design",
+    ],
   },
   {
     id: 30,
@@ -208,6 +446,16 @@ const projectData = [
     description:
       "A responsive navigation application that demonstrates how to create a navigation menu that adapts to different screen sizes. This project showcases state management, responsive design, and Tailwind CSS.",
     link: "responsive-navigation",
+    integration: [
+      "React Hooks (useState)",
+      "Responsive navigation logic",
+      "Tailwind CSS for styling",
+    ],
+    concept: [
+      "Responsive navigation menu",
+      "State management",
+      "Responsive design",
+    ],
   },
 ];
 
