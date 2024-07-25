@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./Components/Header";
 import SearchBar from "./Components/SearchBar";
 import WeatherCard from "./Components/WeatherCard";
-import WeatherDetails from "./Components/WeatherDetails";
+
 import ErrorMessage from "./Components/ErrorMessage";
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);

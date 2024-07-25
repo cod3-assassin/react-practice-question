@@ -11,7 +11,7 @@ const ProjectList = ({ projects }) => {
           title={project.title}
           description={project.description}
           integration={project.integration}
-          concepts={project.concept}
+          concepts={project.concepts}
         />
       ))}
     </div>

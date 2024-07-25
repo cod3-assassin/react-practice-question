@@ -5,61 +5,77 @@ const projectData = [
     description:
       "A basic counter application that allows users to increment and decrement a value. Additional features include a reset button and an input field to set the counter to a specific value. This project demonstrates the use of state management in React using hooks, as well as responsive design with Tailwind CSS.",
     link: "simple-counter",
-    integration: ["React Hooks (useState)", "Tailwind CSS for styling"],
-    concept: ["Basic state management", "Responsive design"],
+    integration: [
+      "React Hooks (useState)",
+      "Tailwind CSS for styling",
+      "Mange Buttons with state",
+    ],
+    concepts: [
+      "Basic state management",
+      "Responsive design",
+      "Plus ,Minus ,Reset",
+    ],
   },
   {
     id: 2,
-    title: "02-To-Do List",
+    title: "02-To-Do App",
     description:
-      "A to-do list application that enables users to add, edit, and remove tasks. Additional features include setting task due dates and priorities, as well as persistent storage using local storage. This project showcases dynamic list rendering, state management with hooks, and responsive design with Tailwind CSS.",
-    link: "to-do-list",
+      "A comprehensive To-Do application built with React and Redux for state management. This app allows users to add, edit, delete, and toggle tasks as completed or incomplete. The application uses Redux for managing task state and persisting data to local storage. The interface includes task input, task list, and task statistics, all styled using Tailwind CSS for a modern and responsive design.",
+    link: "todo-app",
     integration: [
-      "React Hooks (useState, useEffect)",
-      "Local Storage for data persistence",
+      "React for UI development",
+      "Redux for state management",
       "Tailwind CSS for styling",
+      "Local Storage for persistence",
     ],
-    concept: [
-      "Dynamic list rendering",
-      "State management",
-      "Persistent storage",
+    concepts: [
+      "State management with Redux",
+      "Local storage handling",
+      "Responsive design with Tailwind CSS",
     ],
   },
   {
     id: 3,
     title: "03-Weather App",
     description:
-      "A weather application that enables users to search for the current weather conditions in any city. This project showcases dynamic rendering of weather data fetched from an API, integration of React hooks for state management, and responsive design using Tailwind CSS.",
+      "A weather application that provides current weather information for any city. Users can search for weather details, which are displayed in a clean, responsive layout. The app features a search bar for city input, a header, weather details, and error handling. The interface is styled using Tailwind CSS for a modern look and feel.",
     link: "weather-app",
     integration: [
-      "React Hooks (useState, useEffect)",
-      "Weather API integration",
+      "React for UI development",
       "Tailwind CSS for styling",
+      "OpenWeatherMap API for weather data",
+      "Responsive design",
     ],
-    concept: ["API data fetching", "Dynamic rendering", "Responsive design"],
+    concepts: [
+      "API integration",
+      "Component-based architecture",
+      "Responsive design with Tailwind CSS",
+    ],
   },
   {
     id: 4,
     title: "04-Calculator",
     description:
-      "An advanced calculator application that supports continuous arithmetic operations, percentage calculations, and keyboard input. This project demonstrates state management using React Hooks, event handling for seamless interaction, and responsive design with Tailwind CSS. The interface is enhanced with modern UI elements like dynamic button styling and a clean, elegant layout.",
+      "A functional calculator built with React that performs basic arithmetic operations. It features a modern UI with responsive design using Tailwind CSS. Users can perform addition, subtraction, multiplication, division, and percentage calculations. The calculator supports keyboard inputs and displays results dynamically.",
     link: "calculator",
     integration: [
-      "React Hooks (useState)",
-      "Keyboard event handling",
+      "React for UI development",
       "Tailwind CSS for styling",
-    ],
-    concept: [
-      "Continuous arithmetic operations",
-      "Dynamic button styling",
       "Responsive design",
+    ],
+    concepts: [
+      "State management in React",
+      "Event handling",
+      "Dynamic UI updates",
+      "Responsive design with Tailwind CSS",
     ],
   },
   {
     id: 5,
     title: "05-Expense Tracker",
     description:
-      "An expense tracker application built with React and Tailwind CSS, designed to help users manage their income and expenses efficiently.",
+      "An expense tracker application built with React and Tailwind CSS, designed to help users manage their income and expenses efficiently. It allows users to add, track, and delete transactions, maintaining a clear overview of their balance. The application distinguishes between income and expenses and provides a reset functionality for income.",
+    link: "expense-tracker",
     integration: [
       "State management handled using the useReducer hook",
       "Form handling for adding income and expenses",
@@ -67,14 +83,13 @@ const projectData = [
       "Local storage for data persistence",
       "Tailwind CSS for responsive UI",
     ],
-    concept: [
+    concepts: [
       "React hooks (useState, useReducer, useContext)",
       "Context API",
       "Local storage",
       "Form handling",
-      "Responsive design",
+      "Responsive design with Tailwind CSS",
     ],
-    link: "expense-tracker",
   },
   {
     id: 6,
