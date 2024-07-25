@@ -21,7 +21,7 @@ const projectData = [
     title: "02-To-Do App",
     description:
       "A comprehensive To-Do application built with React and Redux for state management. This app allows users to add, edit, delete, and toggle tasks as completed or incomplete. The application uses Redux for managing task state and persisting data to local storage. The interface includes task input, task list, and task statistics, all styled using Tailwind CSS for a modern and responsive design.",
-    link: "todo-app",
+    link: "to-do-list",
     integration: [
       "React for UI development",
       "Redux for state management",
