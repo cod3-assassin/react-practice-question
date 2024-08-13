@@ -1,57 +1,38 @@
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+// src/components/Home.jsx
+import React from "react";
+import { FaHome } from "react-icons/fa";
 import Footer from "./Footer";
-import Logo from "./canvas.png";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import projectData from "./ProjectList/ProjectData";
 import ProjectList from "./ProjectList/ProjectList";
+import SocialIcons from "./SocialIcons";
 
 const Home = () => {
-  const navigate = useNavigate();
-  const [lastVisitedProject, setLastVisitedProject] = useState(null);
-
-  const handleProjectClick = (projectId) => {
-    setLastVisitedProject(projectId);
-    navigate(`/project/${projectId}`);
+  const handleHomeClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div className="bg-gray-900 min-h-screen flex flex-col">
       <header className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 shadow-2xl py-2 md:py-4 sticky top-0 z-10">
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <div className="flex items-center">
-            <img
-              className="h-10 w-10 md:h-12 md:w-12 text-white"
-              src={Logo}
-              alt="Logo"
-            />
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white ml-2">
+          <div className="flex items-center space-x-4 md:space-x-6">
+            <button
+              onClick={handleHomeClick}
+              className="relative inline-block p-3 transition-transform transform hover:scale-110 rounded-md"
+              style={{
+                color: "white",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2)",
+                background: "rgba(255, 255, 255, 0.1)",
+              }}
+            >
+              <FaHome className="text-xl md:text-2xl" />
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-opacity-1 to-opacity-10 opacity-30 blur-md" />
+            </button>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white truncate">
               React Projects
             </h1>
           </div>
-          <nav className="flex space-x-2 md:space-x-4">
-            <a
-              href="https://github.com/cod3-assassin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/wasim-shah-3198b52b8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
-            </a>
-            <a
-              href="https://twitter.com/cod3_assassin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter className="text-white text-xl md:text-2xl hover:text-gray-300 transition duration-300" />
-            </a>
-          </nav>
+          <SocialIcons />
         </div>
       </header>
 

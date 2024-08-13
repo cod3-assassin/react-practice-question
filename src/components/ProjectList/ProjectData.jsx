@@ -95,17 +95,21 @@ const projectData = [
     id: 6,
     title: "06-Movie Search App",
     description:
-      "A movie search application that allows users to search for movies and view details. This project showcases API integration, state management, and responsive design with Tailwind CSS.",
+      "A React and Tailwind CSS app for movie search and details. Users can search for movies dynamically and view detailed information. The app is fully responsive, ensuring a seamless experience on any device. It integrates with a third-party API to fetch real-time data and includes features like error handling and loading indicators for a smooth user experience. using Tailwind CSS for consistent styling across different screen sizes.",
     link: "movies-app",
     integration: [
-      "React Hooks (useState, useEffect)",
+      "React Context API",
       "Movie API integration",
-      "Tailwind CSS for styling",
+      "Tailwind CSS",
+      "React Hooks (useState, useEffect)",
+      "Local Storage (potential)",
     ],
-    concept: [
-      "API data fetching",
-      "Dynamic search functionality",
+    concepts: [
+      "State management",
+      "API fetching",
+      "Dynamic search",
       "Responsive design",
+      "Conditional rendering",
     ],
   },
   {

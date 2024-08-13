@@ -1,8 +1,13 @@
-// src/components/06-Movie-Search-App.js
 import React from "react";
+import Home from "./pages/Home";
+import MovieProvider from "./contexts/MovieContext";
 
 const MoviesApp = () => {
-  return <div>Movie Search App Component</div>;
+  return (
+    <MovieProvider>
+      <Home />
+    </MovieProvider>
+  );
 };
 
 export default MoviesApp;
